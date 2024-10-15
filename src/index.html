@@ -11,20 +11,99 @@
     <link rel="icon" type="image/x-icon" href="assets/logo.svg">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.colors.js"></script>
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
 </head>
-<body>
-    <header>
-        <nav>
-
+<body class="bg-lg text-dg">
+    <header class="fixed w-full bg-white shadow-sm z-20">
+        <nav class="flex justify-between w-full p-6">
+            <div>
+                <a href="./">
+                    <img width="60" height="60" src="assets/logo.svg" alt="logo">
+                </a>
+            </div>
+            <ul class="flex gap-4 items-center text-xl font-semibold">
+                <li><a id="home-btn" class="cursor-pointer md:hover:text-db">Home</a></li>
+                <li><a id="about-btn" class="cursor-pointer md:hover:text-db">About</a></li>
+                <li><a id="projects-btn" class="cursor-pointer md:hover:text-db">Projects</a></li>
+                <li><a id="contact-btn" class="cursor-pointer md:hover:text-db">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
+    <main id="content" hx-get="views/home.html" hx-swap="innerHTML" hx-trigger="load" class="">
 
     </main>
     <footer>
 
     </footer>
+    <script>
+        // JavaScript to add delay before HTMX request
+        document.getElementById("home-btn").addEventListener("click", function() {
+            const contentDiv = document.getElementById("content");
+            
+            // Show loading indicator
+            contentDiv.innerHTML = `<div class='flex z-10 w-full h-full justify-center items-center fixed'><img class="" src="assets/loader.svg"></div>`;
+
+            // Delay the HTMX request by 2 seconds (2000ms)
+            setTimeout(function() {
+                // Use htmx.ajax() to make the HTMX request manually after the delay
+                htmx.ajax('GET', 'views/home.html', {
+                    target: '#content',
+                    swap: 'innerHTML'
+                });
+            }, 1000); // 2 seconds delay
+        });
+
+        document.getElementById("about-btn").addEventListener("click", function() {
+            const contentDiv = document.getElementById("content");
+            
+            // Show loading indicator
+            contentDiv.innerHTML = `<div class='flex z-10 w-full h-full justify-center items-center fixed'><img class="" src="assets/loader.svg"></div>`;
+
+            // Delay the HTMX request by 2 seconds (2000ms)
+            setTimeout(function() {
+                // Use htmx.ajax() to make the HTMX request manually after the delay
+                htmx.ajax('GET', 'views/about.html', {
+                    target: '#content',
+                    swap: 'innerHTML'
+                });
+            }, 1000); // 2 seconds delay
+        });
+
+        document.getElementById("projects-btn").addEventListener("click", function() {
+            const contentDiv = document.getElementById("content");
+            
+            // Show loading indicator
+            contentDiv.innerHTML = `<div class='flex z-10 w-full h-full justify-center items-center fixed'><img class="" src="assets/loader.svg"></div>`;
+
+            // Delay the HTMX request by 2 seconds (2000ms)
+            setTimeout(function() {
+                // Use htmx.ajax() to make the HTMX request manually after the delay
+                htmx.ajax('GET', 'views/projects.html', {
+                    target: '#content',
+                    swap: 'innerHTML'
+                });
+            }, 1000); // 2 seconds delay
+        });
+
+        document.getElementById("contact-btn").addEventListener("click", function() {
+            const contentDiv = document.getElementById("content");
+            
+            // Show loading indicator
+            contentDiv.innerHTML = `<div class='flex z-10 w-full h-full justify-center items-center fixed'><img class="" src="assets/loader.svg"></div>`;
+
+            // Delay the HTMX request by 2 seconds (2000ms)
+            setTimeout(function() {
+                // Use htmx.ajax() to make the HTMX request manually after the delay
+                htmx.ajax('GET', 'views/contact.html', {
+                    target: '#content',
+                    swap: 'innerHTML'
+                });
+            }, 1000); // 2 seconds delay
+        });
+    </script>
 </body>
 </html>
