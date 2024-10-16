@@ -9,13 +9,17 @@
     <meta name="author" content="Simon Papp">
     <title>Home - Simon Papp</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.svg">
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS Dev -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../tailwind.colors.js"></script>
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- HTMX -->
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    
+
 </head>
 <body class="bg-lg text-dg">
     <header class="fixed w-full bg-white shadow-sm z-20">
@@ -25,7 +29,7 @@
                     <img src="assets/logo.svg" alt="logo" class="size-12 md:size-14">
                 </a>
             </div>
-            
+            <!-- Menu Button -->
             <div id="bars" class="flex items-center md:hidden">
                 <button @click="isOpen = !isOpen" class="flex flex-col gap-1 items-center px-3 pr-0 py-2 text-gray-500 border-0 rounded">
                     <div id="bar1" class="w-5 rounded h-0.5 bg-dg transition-all" x-bind:class="{ '-rotate-45 translate-y-1.5': isOpen }"></div>
@@ -33,13 +37,20 @@
                     <div id="bar1" class="w-5 rounded h-0.5 bg-dg transition-all" x-bind:class="{ 'rotate-45 -translate-y-1.5': isOpen }"></div>
                 </button>
             </div>
-                
-                <ul class="absolute mt-20 bg-white flex-col items-end flex w-full top-0 right-0 p-4 float-right md:flex gap-4 md:items-center text-xl font-semibold" x-show="isOpen" x-transition:enter="transition ease-out duration-150"
+                <!-- Mobile -->
+                <ul class="absolute mt-20 bg-white flex-col items-end flex w-full top-0 right-0 p-4 float-right md:flex gap-4 md:items-center text-xl font-semibold" x-show="isOpen" x-cloak x-transition:enter="transition ease-out duration-150"
                         x-transition:enter-start="opacity-0  translate-x-12"
                         x-transition:enter-end="opacity-100 scale-100"
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100 scale-100"
                         x-transition:leave-end="opacity-0 translate-x-4">
+                    <li><a id="home-btn" @click="isOpen = false" hx-get="views/home.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer md:hover:text-db w-full text-right">Home</a></li>
+                    <li><a id="about-btn" @click="isOpen = false" hx-get="views/about.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer md:hover:text-db">About</a></li>
+                    <li><a id="projects-btn" @click="isOpen = false" hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer md:hover:text-db">Projects</a></li>
+                    <li><a id="contact-btn" @click="isOpen = false" hx-get="views/contact.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer md:hover:text-db">Contact</a></li>
+                </ul>
+                <!-- Large Screens -->
+                <ul class="bg-white items-center hidden  p-4 md:flex gap-4 text-xl font-semibold">
                     <li><a id="home-btn" @click="isOpen = false" hx-get="views/home.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer md:hover:text-db w-full text-right">Home</a></li>
                     <li><a id="about-btn" @click="isOpen = false" hx-get="views/about.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer md:hover:text-db">About</a></li>
                     <li><a id="projects-btn" @click="isOpen = false" hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer md:hover:text-db">Projects</a></li>
@@ -51,7 +62,7 @@
 
     </main>
     <footer>
-
+        
     </footer>
 </body>
 </html>

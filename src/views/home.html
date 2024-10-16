@@ -1,8 +1,12 @@
+<!-- Typewriter JS -->
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="scripts/app.js"></script>
+
 <!-- Hero -->
 <section class="min-h-screen flex items-center justify-center">
     <div class="text-center px-4">
-        <h2 class="text-5xl font-bold text-dg">Hi, I'm <span class="text-lb">Simon Papp</span></h2>
-        <p class="mt-6 text-dg text-xl">A passionate web developer, crafting digital experiences with <span class="text-db">Alpine, PHP, HTMX and more</span></p>
-        <a id="projects-btn" hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="mt-8 inline-block cursor-pointer bg-db p-3 px-5 rounded-full text-white font-bold">View My Work</a>
+        <h2 class="text-5xl font-bold text-dg">Hi, I'm <span id="type-name" class="text-lb"></span></h2>
+        <p class="mt-6 text-dg text-xl">A passionate web developer, crafting digital experiences with <span class="text-db">Alpine JS, PHP, MySQL, HTMX and more</span></p>
+        <a hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="mt-8 inline-block cursor-pointer bg-db md:hover:bg-lb transition-colors duration-75 p-3 px-5 rounded-full text-white font-bold">View My Work</a>
     </div>
 </section>
