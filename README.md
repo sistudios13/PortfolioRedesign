@@ -2,6 +2,6 @@
  Portfolio Redesign
 
 # Stack
- Tailwind
+ Tailwind CSS
  HTMX
- Alpine
+ Alpine JS
