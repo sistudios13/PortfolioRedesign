@@ -32,9 +32,9 @@
             <!-- Menu Button -->
             <div id="bars" class="flex items-center md:hidden">
                 <button @click="isOpen = !isOpen" class="flex flex-col gap-1 items-center px-3 pr-0 py-2 text-gray-500 border-0 rounded">
-                    <div id="bar1" class="w-5 rounded h-0.5 bg-dg transition-all" x-bind:class="{ '-rotate-45 translate-y-1.5': isOpen }"></div>
+                    <div id="bar1" class="w-5 rounded h-0.5 bg-dg transition-all" x-bind:class="{ '-rotate-45 translate-y-1.5 bg-db': isOpen }"></div>
                     <div id="bar1" class="w-5 rounded h-0.5 bg-dg transition-all" x-bind:class="{ 'opacity-0': isOpen }"></div>
-                    <div id="bar1" class="w-5 rounded h-0.5 bg-dg transition-all" x-bind:class="{ 'rotate-45 -translate-y-1.5': isOpen }"></div>
+                    <div id="bar1" class="w-5 rounded h-0.5 bg-dg transition-all" x-bind:class="{ 'rotate-45 -translate-y-1.5 bg-db': isOpen }"></div>
                 </button>
             </div>
                 <!-- Mobile -->
