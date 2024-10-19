@@ -5,12 +5,12 @@
 <!-- Hero -->
 <section class="min-h-screen flex items-center justify-center">
     <div class="text-center px-4 relative">
-        <h2 class="text-5xl font-bold text-dg">Hi, I'm <span id="type-name" class="text-lb"></span></h2>
+        <h2 class="text-5xl font-bold text-dg">Hi, I'm <br class="md:hidden"> <span id="type-name" class="text-lb">S</span></h2>
         <p class="mt-6 text-gray-700 text-xl">A passionate young web developer, crafting digital experiences with <span class="text-db">Alpine JS, PHP, MySQL, HTMX and more</span></p>
-        <a hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="mt-8 inline-block cursor-pointer bg-p md:hover:bg-lb transition-colors duration-75 p-3 px-5 rounded-full text-white font-bold">View My Work</a>
+        <a href="#content" hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="mt-8 inline-block cursor-pointer bg-p lg:hover:bg-lb transition-colors duration-75 p-3 px-5 rounded-full text-white font-bold">View My Work</a>
         
         <div class="absolute left-1/2">
-            <svg class="relative animate-bounce-short -left-1/2 mt-16 md:mt-32" fill="#2a2a2a" height="100" width="100" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 476.21 476.21" xml:space="preserve" stroke="#2a2a2a" stroke-width="0.004762130000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#2a2a2aCCCCCC" stroke-width="6.666982000000002"></g><g id="SVGRepo_iconCarrier"> <polygon points="287.5,384.394 253.107,418.787 253.107,0 223.107,0 223.107,418.787 188.713,384.394 167.5,405.606 238.107,476.213 308.713,405.606 "></polygon> </g></svg>
+            <svg class="relative animate-bounce-short -left-1/2 mt-16 lg:mt-32" fill="#2a2a2a" height="100" width="100" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 476.21 476.21" xml:space="preserve" stroke="#2a2a2a" stroke-width="0.004762130000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#2a2a2aCCCCCC" stroke-width="6.666982000000002"></g><g id="SVGRepo_iconCarrier"> <polygon points="287.5,384.394 253.107,418.787 253.107,0 223.107,0 223.107,418.787 188.713,384.394 167.5,405.606 238.107,476.213 308.713,405.606 "></polygon> </g></svg>
         </div>
     </div>
 </section>
@@ -20,7 +20,7 @@
     <div class="px-4 2xl:px-24 py-24  relative">
         <h2 class="text-4xl font-bold text-dg">Weclome to my portfolio!</h2>
         <p style="color: #374151 ;" class="mt-6 text-lg text-dg mb-6">I am a passionate developer with a deep love for coding that began at 11 years old. With years of experience and a commitment to continuous learning, I've honed my skills across various programming languages and technologies. <b>My projects reflect my dedication to creating innovative solutions and my drive to push the boundaries of what's possible in the digital world.</b></p>
-        <a hx-get="views/about.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer font-bold md:hover:text-p transition-all md:hover:tracking-widest">Learn more about me &rarr;</a>
+        <a href="#content" hx-get="views/about.html" hx-swap="innerHTML" hx-target="#content" class="cursor-pointer font-bold lg:hover:text-p transition-all lg:hover:tracking-widest">Learn more about me &rarr;</a>
     </div>
 </section>
 
@@ -30,26 +30,26 @@
         <h2 class="text-4xl text-center font-bold mb-12 text-dg">My Projects</h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Project 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg md:hover:shadow-xl transition">
+            <div class="bg-white p-6 rounded-lg shadow-lg lg:hover:shadow-xl transition">
                 <h4 class="text-xl font-semibold mb-2" style="color: var(--light-blue);">Shotstreak</h4>
                 <p class="text-gray-700 mb-4">A basketball shot tracking app that helps players improve their performance.</p>
-                <a href="https://shotstreak.simonsites.com" target="_blank" class=" transition-all md:hover:tracking-widest font-semibold cursor-pointer md:hover:text-db">View Project</a>
+                <a href="https://shotstreak.simonsites.com" target="_blank" class=" transition-all lg:hover:tracking-widest font-semibold cursor-pointer lg:hover:text-db">View Project</a>
             </div>
             <!-- Project 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg md:hover:shadow-xl transition">
+            <div class="bg-white p-6 rounded-lg shadow-lg lg:hover:shadow-xl transition">
                 <h4 class="text-xl font-semibold mb-2" style="color: var(--light-blue);">Questor</h4>
                 <p class="text-gray-700 mb-4">A platformer game that I developed with Godot, full challenges and interesting levels.</p>
-                <a href="https://westr86.itch.io/questor" target="_blank" class=" transition-all md:hover:tracking-widest font-semibold cursor-pointer md:hover:text-db">View Project</a>
+                <a href="https://westr86.itch.io/questor" target="_blank" class=" transition-all lg:hover:tracking-widest font-semibold cursor-pointer lg:hover:text-db">View Project</a>
             </div>
             <!-- Project 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg md:hover:shadow-xl transition">
+            <div class="bg-white p-6 rounded-lg shadow-lg lg:hover:shadow-xl transition">
                 <h4 class="text-xl font-semibold mb-2" style="color: var(--light-blue);">SimonSites</h4>
                 <p class="text-gray-700 mb-4">A web development service I created to help clients build modern websites.</p>
-                <a href="https://simonsites.com" target="_blank" class=" transition-all md:hover:tracking-widest font-semibold cursor-pointer md:hover:text-db">View Project</a>
+                <a href="https://simonsites.com" target="_blank" class=" transition-all lg:hover:tracking-widest font-semibold cursor-pointer lg:hover:text-db">View Project</a>
             </div>
         </div>
         <div class="flex justify-center">
-            <a hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="text-center my-8 cursor-pointer text-xl font-bold md:hover:text-p transition-all md:hover:tracking-widest">See More &rarr;</a>
+            <a href="#content" hx-get="views/projects.html" hx-swap="innerHTML" hx-target="#content" class="text-center my-8 cursor-pointer text-xl font-bold lg:hover:text-p transition-all lg:hover:tracking-widest">See More &rarr;</a>
         </div>
     </div>
 </section>

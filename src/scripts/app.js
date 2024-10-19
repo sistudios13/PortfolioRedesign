@@ -22,3 +22,28 @@ else {
     .start()
 }
 
+var type = document.getElementById('type-phrase');
+
+var typewriter1 = new Typewriter(type, {
+    loop: true,
+    cursor: '',
+    delay: 75
+    
+});
+
+
+
+typewriter1
+    .typeString('Developer')
+    .deleteAll()
+    .typeString('Problem Solver')
+    .deleteAll()
+    .typeString('Web Architect')
+    .deleteAll()
+    .typeString('Full-stack Enthusiast')
+    .deleteAll()
+    .typeString('Creative Thinker')
+    .deleteAll()
+    .start()
+
+
