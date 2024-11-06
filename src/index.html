@@ -27,9 +27,9 @@
     
 
 </head>
-<body class="bg-lg text-dg">
+<body class="bg-lg text-dg" x-data="{isOpen : false, current: 1}">
     <header id="top" class="fixed w-full bg-white shadow-sm z-20">
-        <nav class="flex justify-between w-full p-6" x-data="{isOpen : false, current: 1}" @click.away="isOpen = false">
+        <nav class="flex justify-between w-full p-6"  @click.away="isOpen = false">
             <div>
                 <a href="./">
                     <img src="assets/logo.svg" alt="logo" class="size-12 md:size-14">
